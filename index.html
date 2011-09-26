@@ -76,7 +76,7 @@ Read the Python documentation on your Kindle!
 
 <h3 id="step-by-steptutorial">Step-by-step tutorial</h3>
 
-<p>I tweaked <a href="https://bitbucket.org/charlax/sphinx">Sphinx</a> a little bit (see modifications below) to make this possible.</p>
+<p>I tweaked Sphinx a little bit (see modifications below) to make this possible.</p>
 
 <pre><code>$ cd ~/Downloads
 $ hg clone https://bitbucket.org/charlax/sphinx
@@ -91,11 +91,11 @@ $ python ~/Downloads/sphinx/sphinx-build.py -a -b mobi . build/mobi
 
 <h3 id="modifiedversionofsphinx">Modified version of Sphinx</h3>
 
-<p>Context: the Kindle uses a proprietary format <code>.azw</code>., based on MOBI, another format designed by Mobipocket. This French company was bought by Amazon.com in 2005.</p>
+<p>Context: the Kindle uses a proprietary format <code>.azw</code>. It is based on MOBI, another format designed by Mobipocket. This French company was acquired by Amazon.com in 2005.</p>
 
-<p>I added a MOBI builder to Sphinx, based on the ePub one. There are scarce documentation about the MOBI format: this is the reason why I used KindleGen to convert the ePub to a MOBI ebook.</p>
+<p>I added a MOBI builder to Sphinx, based on the ePub one. Since there are scarce documentation about the MOBI format, I used KindleGen to convert the generated ePub to a MOBI ebook.</p>
 
-<p>Here&#8217;s what I changed to Sphinx:</p>
+<p>Here&#8217;s what I changed to <a href="https://bitbucket.org/charlax/sphinx">Sphinx</a>:</p>
 
 <ul>
 <li>Added guide section to <code>content.opf</code> (required by Amazon to set the first content shown and the TOC file)</li>
@@ -106,6 +106,7 @@ $ python ~/Downloads/sphinx/sphinx-build.py -a -b mobi . build/mobi
 <h2 id="author">Author</h2>
 
 <p>Charles-Axel Dein – <a href="http://www.d3in.org/">www.d3in.org</a></p>
+
 
 
 

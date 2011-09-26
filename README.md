@@ -1,10 +1,3 @@
-<h1><a href="http://github.com/charlax/Python-Documentation-Kindle">Python-Documentation-Kindle</a>
-  <span class="small">by <a href="http://github.com/charlax">charlax</a></span></h1>
-
-<div class="description">
-Read the Python documentation on your Kindle!
-</div>
-
 This project lets you download a **Kindle-optimized version of the Python documentation**. You can also create your own ebook for any project using Sphinx to generate its documentation.
 
 Download
@@ -33,7 +26,7 @@ You also need to install Amazon's [KindleGen](http://www.amazon.com/gp/feature.h
 
 ### Step-by-step tutorial
 
-I tweaked [Sphinx](https://bitbucket.org/charlax/sphinx) a little bit (see modifications below) to make this possible.
+I tweaked Sphinx a little bit (see modifications below) to make this possible.
 
 	$ cd ~/Downloads
 	$ hg clone https://bitbucket.org/charlax/sphinx
@@ -47,11 +40,11 @@ The MOBI ebook is `~/Downloads/Python-3.2.2/Doc/build/mobi/Python.mobi`
 
 ### Modified version of Sphinx
 
-Context: the Kindle uses a proprietary format `.azw`., based on MOBI, another format designed by Mobipocket. This French company was bought by Amazon.com in 2005.
+Context: the Kindle uses a proprietary format `.azw`. It is based on MOBI, another format designed by Mobipocket. This French company was acquired by Amazon.com in 2005.
 
-I added a MOBI builder to Sphinx, based on the ePub one. There are scarce documentation about the MOBI format: this is the reason why I used KindleGen to convert the ePub to a MOBI ebook.
+I added a MOBI builder to Sphinx, based on the ePub one. Since there are scarce documentation about the MOBI format, I used KindleGen to convert the generated ePub to a MOBI ebook.
 
-Here's what I changed to Sphinx:
+Here's what I changed to [Sphinx](https://bitbucket.org/charlax/sphinx):
 
 * Added guide section to `content.opf` (required by Amazon to set the first content shown and the TOC file)
 * Removed `@font-face` in the CSS (not supported by the MOBI format)
