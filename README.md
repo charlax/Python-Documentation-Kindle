@@ -33,7 +33,7 @@ I tweaked Sphinx a little bit (see modifications below) to make this possible.
 	$ wget http://www.python.org/ftp/python/3.2.2/Python-3.2.2.tar.bz2
 	$ tar xjf Python-3.2.2.tar.bz2
 	$ cd Python-3.2.2/Doc
-	$ echo "\n# to have the correct first page on Kindle\nepub_pre_files = [('index.html', 'Overview'),]" >> conf.py
+	$ echo -e "\n# to have the correct first page on Kindle\nepub_pre_files = [('index.html', 'Overview'),]" >> conf.py
 	$ python ~/Downloads/sphinx/sphinx-build.py -a -b mobi . build/mobi
 
 The MOBI ebook is `~/Downloads/Python-3.2.2/Doc/build/mobi/Python.mobi`
